@@ -1,0 +1,60 @@
+---
+usetitle: "Day_2"
+author: "Jake Eisaguirre"
+date: "8/3/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###Derivitives in R
+
+```{r}
+
+fx <- expression(x ^ 2)
+
+df_dx <- D(expr = fx, name = 'x')
+
+df_dx
+
+#Evaluate the slop of f(x) at x=831
+
+x <- 831
+
+eval(expr = df_dx)
+
+#seq
+
+x <- seq(from = -10, to = 10, by = 0.5)
+
+
+```
+
+
+```{r}
+
+gt <- expression(3 * t ^ 2 - 4 * cos(t))
+
+dg_dt <- D(expr = gt, name = 't')
+
+dg_dt
+
+
+```
+
+```{r}
+
+zx <- expression(log(4*x))
+
+dz_dx <- D(expr = zx, name = 'x')
+
+dz_dx
+
+x <- 43230843
+
+eval( expr = dz_dx)
+
+```
+
